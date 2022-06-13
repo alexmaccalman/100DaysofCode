@@ -30,3 +30,4 @@ fur.index.name = 'fur color'
 fur.name = 'count'
 
 fur.to_csv("squirrel_count.csv")
+
