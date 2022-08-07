@@ -21,10 +21,13 @@ while game_is_on:
     # check if the guess is among the 50 states
     if answer_state == "Exit":
         game_is_on = False
-        missing_states = []
-        for state in states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        # missing_states = []
+        # for state in states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
+        
+        missing_states = [state for state in states if state not in guessed_states] 
+        
         states_to_learn = pd.DataFrame(missing_states)
         states_to_learn.to_csv("states_to_learn.csv")
         break
