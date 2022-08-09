@@ -1,35 +1,38 @@
-from fnmatch import translate
 from tkinter import *
-from matplotlib.pyplot import text
 import pandas as pd
 import random
+import os
 
 BACKGROUND_COLOR = "#B1DDC6"
 
-# ------- randomly select a word ------
-import_words = pd.read_csv("data/french_words.csv")
-words = pd.DataFrame.to_dict(import_words, orient="record")
-current_card = {} # this is dict that assigned a global dict of the current card
+# ------- import the word ------
+path = "data/words_to_learn.csv"
+isExist = False
+isExist = os.path.exists(path)
+if isExist: 
+    import_words = pd.read_csv("data/words_to_learn.csv")
+else:
+    import_words = pd.read_csv("data/french_words.csv")
 
+words = import_words.to_dict(orient="record")
+current_card = {} # this is dict that assigned a global dict of the current card
 
 random_dic = random.choice(words)
 
 START_LANGUAGE = list(random_dic.keys())[0]
 TRANSLATED_LANGUAGE = list(random_dic.keys())[1]
 
+#print(words)
+#print('break')
+#print(list(words))
 
-print(list(random_dic.keys())[0]) # start language
-print(list(random_dic.values())[0]) # start word
-print(list(random_dic.keys())[1]) # translated language
-print(list(random_dic.values())[1]) # translated word
-
-def get_word():
-    random_dic = random.choice(words)
-    start_language = list(random_dic.keys())[0] # start language
-    start_word = list(random_dic.values())[0] # start word
-    translated_lan = list(random_dic.keys())[1]
-    translated_word = list(random_dic.values())[1]
-    return (start_language, start_word, translated_lan, translated_word)
+# def get_word():
+#     random_dic = random.choice(words)
+#     start_language = list(random_dic.keys())[0] # start language
+#     start_word = list(random_dic.values())[0] # start word
+#     translated_lan = list(random_dic.keys())[1]
+#     translated_word = list(random_dic.values())[1]
+#     return (start_language, start_word, translated_lan, translated_word)
 
 def next_card():
     global current_card
@@ -48,6 +51,11 @@ def flip_card():
     canvas.itemconfig(card_background, image=card_back_img)
     flip_timer = window.after(3000, func=flip_card)
 
+def remove_word():
+    words.remove(current_card)
+    data = pd.DataFrame(words)
+    data.to_csv("data/words_to_learn.csv", index=False)
+    next_card()
 
 #-----UI setup--------------------
 window = Tk()
@@ -70,7 +78,7 @@ unknown_button = Button(image=wrong_img, highlightthickness=0, command=next_card
 unknown_button.grid(row=1, column=0)
 
 right_img = PhotoImage(file="images/right.png")
-known_button = Button(image=right_img, highlightthickness=0, command=next_card)
+known_button = Button(image=right_img, highlightthickness=0, command=remove_word)
 known_button.grid(row=1, column=1)
 
 next_card()
