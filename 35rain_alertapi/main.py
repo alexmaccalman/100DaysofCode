@@ -3,6 +3,7 @@ import requests
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
 import os
+from decouple import config
 
 # https://console.twilio.com/?frameUrl=%2Fconsole%3Fx-target-region%3Dus1&newCustomer=true
 # https://www.pythonanywhere.com/user/amaccalman/tasks_tab/
@@ -10,13 +11,13 @@ import os
 
 
 OWM_ENDPOINT = "https://api.openweathermap.org/data/3.0/onecall"
-api_keyold = "5fcb4ec58e5335c846537e6365a711e1"
-api_key = "a1d5030a6d4d4631003e27a0fbf462b4"
 MY_LAT = 39.56633021926093 # Your latitude
 MY_LONG = -76.33500179850502 # Your longitude
 
-account_sid = 'AC04033c01600bf128ac2d856110e3b496'
-auth_token = 'ffd966332a8451d983272a397ea67970'
+# read in environmental variables 
+api_key = config("API_KEY")
+account_sid = config("ACCOUNT_SID")
+auth_token = config("AUTH_TOKEN")
 
 
 TEST_LAT = 42.112894
@@ -45,9 +46,10 @@ for hour_data in weather_slice:
         print(will_rain)
 
 if will_rain:
-    proxy_client = TwilioHttpClient()
-    proxy_client.session.proxies = {'https': os.environ['https_proxy']}
-    client = Client(account_sid, auth_token, http_client=proxy_client)
+    #proxy_client = TwilioHttpClient()
+    #proxy_client.session.proxies = {'https': os.environ['https_proxy']}
+    #client = Client(account_sid, auth_token, http_client=proxy_client)
+    client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
         body="It's going to rain today. Remember to bring an ☂️.",
