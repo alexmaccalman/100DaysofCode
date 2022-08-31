@@ -1,0 +1,24 @@
+/************TAG SELECTORS***************/
+body {
+    background-color: #D6EFED;
+}
+h1 {
+    color: #0F3460;
+}
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 5%;
+}
+
+/********Class SELECTORS(can use multiple times, can add more then one too a tag********/
+.name{
+    color: red;
+}
+
+/***ID SELECTORS(can only have one in whole html page)***/
+#heading {
+    color: blue;
+}

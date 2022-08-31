@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    text-align: center;
+   
+}
+
+h1 {
+    margin: 0 auto 0; 
+    font-size: 560%;
+    color: white; 
+}
+h2 {
+    font-weight: normal;
+}
+
+
+
+.top-container{
+    background-color: #0F3460;
+    position: relative;
+    padding-top: 100px;
+}
+.middle-container{
+
+}
+.bottom-container{
+ 
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.senior {
+    text-decoration: underline;
+}
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}
+
+.code-image {
+    width: 10%;
+    float: left;
+    margin-right: 30px;
+}
+
+.code-skills-description {
+    clear: left
+}

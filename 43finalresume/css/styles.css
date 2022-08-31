@@ -1,0 +1,208 @@
+body {
+
+  margin: 0;
+  text-align: center;
+  
+ 
+}
+.pics {
+
+  resize: inline;
+}
+
+
+h1 {
+  color: white;
+  font-size: 5.625rem;
+  margin: 10px auto 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+
+}
+
+h3 {
+  
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  line-height: 2;
+}
+
+hr {
+ width: 70%;
+}
+
+a{
+  color: #100720;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+.role {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.profile{
+  color: white;
+  background-color: #16213E;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.top-container {
+  background-color: black;
+  position: relative;
+  padding-top: 20px;
+}
+
+.middle-container {
+  
+}
+
+.bottom-container {
+  background-color: #16213E;
+  padding: 50px 0 20px;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.left-column {
+  flex: 50%;
+  padding-left: 0px;
+  column-width: 2000px
+}
+.right-column {
+  flex: 50%;
+  padding-left: 0px;
+  column-width: 400px
+}
+
+.left-title{
+  text-align: left;
+  padding-left: 200px;
+  margin: 0;
+}
+.right-date {
+  text-align: right;
+  padding-right: 250px;
+  margin: 0;
+}
+.role-statement {
+  text-align: left;
+  padding-left: 200px;
+  margin: 0;
+  line-height: 1.5;
+  
+}
+
+.bullets {
+ text-align: left;
+ padding-left: 250px;
+ padding-bottom: 30px;
+ margin: 0%;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro {
+  width: 80%;
+  margin: auto;
+  font-size: 1.75rem;
+  padding-bottom: 10px;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+
+.code-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.chilli-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+.btn {
+  background: black;
+  background-image: -webkit-linear-gradient(top, black, #100720);
+  background-image: -moz-linear-gradient(top, black, #100720);
+  background-image: -ms-linear-gradient(top, black, #100720);
+  background-image: -o-linear-gradient(top, black, #100720);
+  background-image: linear-gradient(to bottom, black, #100720);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #256D85;
+  background-image: -webkit-linear-gradient(top, #256D85, #256D85);
+  background-image: -moz-linear-gradient(top, #256D85, #256D85);
+  background-image: -ms-linear-gradient(top, #256D85, #256D85);
+  background-image: -o-linear-gradient(top, #256D85, #256D85);
+  background-image: linear-gradient(to bottom, #256D85, #256D85);
+  text-decoration: none;
+}
+
+/* Linkedin */
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+/* GiHub */
+.fa-github {
+
+  background: #000000;
+  color: white;
+  border-radius: 80%;
+  font-size: 100px;
+  width: 30px;
+  height: auto;
+}
+
+/* YouTube */
+.fa-youtube {
+  background: red;
+  color: white;
+}
