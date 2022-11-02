@@ -19,6 +19,7 @@ song_list = [song.getText().strip() for song in songs]
 artists = soup.find_all(name="span", class_=re.compile('^c-label a-no-trucate*'))
 artists_list = [artist.getText().strip() for artist in artists]
 
+
 scope =  "playlist-modify-private" 
 SPOTIFY_CLIENT_ID = config("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = config("SPOTIFY_CLIENT_SECRET")

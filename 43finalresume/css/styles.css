@@ -2,6 +2,10 @@ body {
 
   margin: 0;
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  background: #F2F2F2;
+  color: #323232;
   
  
 }
@@ -16,10 +20,6 @@ h1 {
   font-size: 5.625rem;
   margin: 10px auto 0 auto;
   font-family: 'Montserrat', sans-serif;
-}
-
-h2 {
-
 }
 
 h3 {
@@ -53,6 +53,16 @@ a:hover {
   font-weight: normal;
   padding-bottom: 10px;
 }
+
+
+.top-container {
+  background-color: black;
+  position: relative;
+  padding-top: 20px;
+  margin: 0;
+  text-align: center;
+}
+
 .profile{
   color: white;
   background-color: #16213E;
@@ -60,47 +70,113 @@ a:hover {
   padding-bottom: 20px;
 }
 
-.top-container {
-  background-color: black;
-  position: relative;
-  padding-top: 20px;
+.counter {
+  color: white;
+  background-color: #16213E;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.middle-container {
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 4 fr;
+  grid-gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.job {
+  padding-bottom: 0px;
+  margin-bottom:  0px;
+  border-bottom: 1px solid lightgray;
+}
+
+.job:last-child {
+  border-bottom: none;
+}
+
+.job-org {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold
+}
+
+.job-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.job-title {
+  width: 600px;
+  font-weight: bold;
+}
+
+.job-description {
+  width: 790px;
+  font-style: italic;
+}
+
+.school {
+  padding-bottom: 0px;
+  margin-bottom:  0px;
+
+}
+.school-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+}
+.school-degree {
+  width: 600px;
+  font-weight: bold;
+}
+.school-org {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: left;
   
 }
+
+.skills-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 800;
+  margin-bottom: 24px;
+}
+
 
 .bottom-container {
   background-color: #16213E;
   padding: 50px 0 20px;
 }
 
-.row {
-  display: flex;
-}
-
-/* Create two equal columns that sits next to each other */
-.left-column {
-  flex: 50%;
-  padding-left: 0px;
-  column-width: 2000px
-}
-.right-column {
-  flex: 50%;
-  padding-left: 0px;
-  column-width: 400px
-}
-
-.left-title{
-  text-align: left;
-  padding-left: 200px;
-  margin: 0;
-}
-.right-date {
-  text-align: right;
-  padding-right: 250px;
-  margin: 0;
-}
 .role-statement {
   text-align: left;
   padding-left: 200px;
@@ -111,15 +187,10 @@ a:hover {
 
 .bullets {
  text-align: left;
- padding-left: 250px;
- padding-bottom: 30px;
+ padding-left: 30px;
+ padding-right: 50px;
+ padding-bottom: 20px;
  margin: 0%;
-}
-
-.skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
 }
 
 .pro {
@@ -131,6 +202,7 @@ a:hover {
   margin: auto;
   font-size: 1.75rem;
   padding-bottom: 10px;
+  font-style: italic;
 }
 
 .contact-message {
@@ -151,11 +223,7 @@ a:hover {
   margin-right: 30px;
 }
 
-.chilli-img {
-  width: 25%;
-  float: right;
-  margin-left: 30px;
-}
+
 
 .btn {
   background: black;
