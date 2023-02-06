@@ -1,0 +1,44 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-color:black">
+    <div class="overlay"></div>
+    <!-- <img class="skills" src="static/img/skills.png" alt="skills-img"> -->
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+
+            <h1>About Me</h1>
+            <span class="subheading">This is what I do.</span>
+            <img class="skills" src="static/img/areas.png" alt="areas-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div>
+        <p>I'm a proven leader in innovation management and digital transformation. These experiences provided me with a deep intuition on understanding the people, problems, and cultural challenges any organization faces when modernizing.</p>
+        <a class="btn btn-primary float-center" href="{{url_for('get_all_posts')}}">See My Projects</a>
+      </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>🔭 I want to orchestrate high-impact innovative solutions that drive strategic outcomes for the good of society.</p>
+        <p> <img src="https://img.icons8.com/emoji/48/null/rocket-emji.png"/> I’m an aspiring AI Edge Engineer with a passion for learning tech. </p>
+        <p><img src="https://img.icons8.com/emoji/48/null/light-bulb-emoji.png"/> I enjoy leading complex innovation projects with a group of passionate people who share a common vision.</p>
+        <p><img src="static/img/greenberet.png"/> I’m a Green Beret that thrives in ambiguous, fast-paced environments.</p>
+        <p>🌱 I’m currently learning Python, Bash Scripting, Azure, and Terraform.</p>
+        <p><img src="https://img.icons8.com/emoji/48/null/graduation-cap-emoji.png"/> I have a Ph.D. in Simulation Analysis, an MS in Operations Research, and a BS in Engineering Management.</p>
+        <p>⚡ Fun fact: I have over 4,600 jumps and was the Chief Engineer of a project to build the "Iron Man Suit."</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% include "footer.html" %}
